@@ -3,6 +3,7 @@
 exports.render = function (req, res) {
     res.render('aboutme', {
         title: 'About Me',
-        description: 'Here you can find some information about me!'
+        name: 'Bruna Donatoni',
+        description: 'I am an industrial engineer with 3 years of experience. In my work, I realized that I was not fluent in machine language, so I am studying software Engineering Technician at Centennial College. Please, for more details, see my resume in pdf.  '
     })
 };

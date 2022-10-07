@@ -20,6 +20,10 @@ a {
 footer {
   color: aliceblue;
   background-color: #232F3E;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
 }
 
 .webname{
@@ -30,12 +34,17 @@ footer {
   margin-left: 8%;
 }
 
-footer{
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 91%;
-  border: 3px;
+ul {
+  list-style-type: circle;
+}
+
+.contactInfo {
+  color: #232F3E;
+}
+
+.projectimg {
+  width:100px;
+  height:100px;
 }
 
 .column {

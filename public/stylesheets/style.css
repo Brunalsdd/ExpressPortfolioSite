@@ -1,8 +1,41 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;  
 }
 
 a {
-  color: #00B7FF;
+  color: #fafcfc;
 }
+
+.headstyle {
+  color: aliceblue;
+  background-color: #232F3E;
+}
+
+.webname{
+  text-align: center;
+}
+
+.textalign{
+  margin-left: 8%;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 91%;
+  border: 3px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Stops the float property from affecting content after the columns */
+.columns:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+

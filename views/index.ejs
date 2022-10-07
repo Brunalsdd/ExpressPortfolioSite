@@ -7,19 +7,23 @@
   <body>
 
     <!-- Header -->
-    <%- include('partials/header.ejs') %>
+    <div class="headstyle">
+      <!-- Header -->
+      <br>
+      <%- include('partials/header.ejs') %>
+      <!-- Navigation Bar -->
+      <%- include('partials/navigationbar.ejs') %>
+    </div>
+
+    <h1 class="webname">Welcome to my Web page!</h1><br><br>
+
+    <h3 class="textalign" >&nbsp Now you can get to know a litle more about my background, and how I can help you to solve your problems.</h3>
+
     
-    <h1><%= title %></h1>
-    <p><%= welcome %></p>
-
-    <!-- Navigation Bar -->
-    <%- include('partials/navigationbar.ejs') %>
-    
-
-
-
     <!-- Footer of the page -->
     <%- include('partials/footer.ejs') %>
+    
   </body>
+ 
 
 </html>

@@ -5,21 +5,29 @@
   <%- include('partials/head.ejs') %>
 
   <body>
+    <div class="headstyle">
+      <!-- Header -->
+      <br>
+      <%- include('partials/header.ejs') %>
+      <!-- Navigation Bar -->
+      <%- include('partials/navigationbar.ejs') %>
+    </div>
 
-    <!-- Header -->
-    <%- include('partials/header.ejs') %>
+    <h1 class="webname"><%= title %></h1>
 
-    <h1><%= title %></h1>
-    <p><%= description %></p>
-
-    <!-- Navigation Bar -->
-    <%- include('partials/navigationbar.ejs') %>
-
-
-
-
+    <div class="columns">
+      <div class="column">
+        <img src="images/Bruna.jpg" alt="About Me">
+      </div>
+      <div class="column">
+        <h3>I am an industrial engineer with 3 years of experience. In my work, I realized that I was not fluent in machine language, so I am studying software Engineering Technician at Centennial College. Please, for more details, see my resume in pdf.  </h3>
+      </div>
+    
+    <div class="columns:after">
     <!-- Footer of the page -->
     <%- include('partials/footer.ejs') %>
+  </div>
+  
   </body>
 
 </html>

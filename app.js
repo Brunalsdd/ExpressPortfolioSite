@@ -1,3 +1,4 @@
+// installed 3rd party packages
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -11,7 +12,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); // express -e
 
 app.use(logger('dev'));
 app.use(express.json());

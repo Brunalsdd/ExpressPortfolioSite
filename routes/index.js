@@ -13,6 +13,7 @@ const aboutMe = require("../controllers/aboutme.controller");
 const contact = require("../controllers/contact.controller");
 const projects = require("../controllers/projects.controller");
 const services = require("../controllers/services.controller");
+const login = require("../controllers/login.controller");
 
 
 
@@ -22,6 +23,7 @@ router.get('/aboutme',  aboutMe.render);
 router.get('/contact',  contact.render);
 router.get('/projects',  projects.render);
 router.get('/services',  services.render);
+router.get('/login',  login.render);
 
 
 

@@ -55,7 +55,7 @@ exports.processRegisterPage = function (req, res) {
 
             //since the new user was registered, authenticate them and redirect
             return passport.authenticate('local')(req,res, () =>{
-                res.redirect('/contacts/list');
+                res.redirect('/contact/list');
             });
         }
     });

@@ -17,6 +17,12 @@
       <%- include('partials/navigationbar.ejs') %>
     </div>
 
+    <% if(messages.length > 0) {%>
+      <div class="alert">
+          <%= messages %>
+      </div>
+    <% } %>
+
     <div class="container" style="width:200px" >
       <br>      <br>      <br>
       <form action="/login" method="post" id="loginForm">

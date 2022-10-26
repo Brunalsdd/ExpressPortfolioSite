@@ -59,7 +59,7 @@ exports.updateContactPage = function (req, res, next) {
 //Method to render a list of contacts
 exports.findAllPage = function(req,res,next) {
     // find all contacts in the contacts collection
-    contactModel.find( (err, contacts) => {
+    contactModel.find({}).sort({name: 1}).exec((err, contacts) => {
         if (err) {
             return console.error(err);
         }

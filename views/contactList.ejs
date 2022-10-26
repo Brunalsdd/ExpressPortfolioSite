@@ -17,7 +17,7 @@
       <%- include('partials/navigationbar.ejs') %>
     </div>
 
-    <div class="container" >
+    <div  >
       <br>      <br>      <br>
       <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
@@ -39,11 +39,11 @@
               <td class="text-center"><%= contacts[count].number %></td>
 
               <td class="text-center">
-                <a href="/contact/<%= contacts[count].id %>" class="btn btn-primary" style="color: #232F3E;"> edit</a>
+                <a href="/contact/<%= contacts[count].id %>" class="btnEdit" > edit</a>
               </td>
 
               <td class="text-center">
-                <a href="/contact/delete/<%= contacts[count].id %>" class="btn btn-primary" style="color: #232F3E;"> delete</a>
+                <a href="/contact/delete/<%= contacts[count].id %>" class="btnDelete" > delete</a>
               </td>
             </tr>
             <% } %>

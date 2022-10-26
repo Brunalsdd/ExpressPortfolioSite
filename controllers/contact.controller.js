@@ -5,7 +5,7 @@ Date: Oct 05, 2022
 */
 
 exports.render = function (req, res) {
-    res.render('contact', {
+    res.render('contactMe', {
         title: 'How to contact me',
         description: 'Here you can find some contact information',
         name: 'Bruna Donatoni',

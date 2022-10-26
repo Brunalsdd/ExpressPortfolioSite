@@ -48,3 +48,8 @@ exports.processLoginPage = function (req, res, next) {
         });
     })(req, res, next);
 }
+
+exports.processLogout = (req,res, next) => {
+    req.logout();
+    res.redirect('/');
+}

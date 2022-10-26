@@ -154,3 +154,8 @@ td {
   border: 1px solid #ddd !important;
   background-color: #fff !important;
 }
+
+.alert {
+  background-color: #aa0404ce;
+  color: white;
+}

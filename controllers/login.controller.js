@@ -4,14 +4,47 @@ Student ID: 301199383
 Date: Oct 05, 2022
 */
 
+let express = require('express');
+let router = express.Router();
+let mongoose = require('mongoose');
+let passport = require('passport');
+
+//Create the user model instance
+let userModel = require('../models/user.model');
+let user = userModel.User; // alias
+
 exports.render = function (req, res) {
-    res.render('login', {
-        title: 'How to contact me',
-        description: 'Here you can find some contact information',
-        name: 'Bruna Donatoni',
-        phone: '(647) 853-3412',
-        email: 'libarde3@hotmail.com',
-        linkedin: 'https://github.com/Brunalsdd',
-        github: 'https://www.linkedin.com/in/bruna-ducceschi-donatoni-3386406b/'
-    })
-};
+
+    // check if the user is already logged in
+    if(!req.user){
+        res.render('login', {
+            title: 'Login',
+            messages: req.flash('loginMessage'),
+            displayName: req.user ? req.user.displayName : ""
+        })
+    } else {
+        return res.redirect('/contacts/list');
+    }
+}
+
+exports.processLoginPage = function (req, res, next) {
+    passport.authenticate('local',(err, user, info) => {
+        // user error?
+        if (err) {
+            return next(err);
+        }
+
+        // is there a user login error?
+        if (!user) {
+            req.flash('loginMessage', 'Authentication Error');
+            return res.redirect('/login');
+        }
+        req.login(user, (err) => {
+            // server error?
+            if (err) {
+                return next(err);
+            }
+            return res.redirect('/contacts/list');
+        });
+    })(req, res, next);
+}

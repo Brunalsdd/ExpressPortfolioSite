@@ -24,6 +24,7 @@ router.get('/contact',  contact.render);
 router.get('/projects',  projects.render);
 router.get('/services',  services.render);
 router.get('/login',  login.render);
+router.post('/login',  login.processLoginPage);
 
 
 

@@ -34,14 +34,14 @@ router.get('/services',  services.render);
 
 // GET route for loading the login page
 router.get('/login',  login.render);
-//POST route for login a user
+// POST route for login a user
 router.post('/login',  login.processLoginPage);
 // GET route for logout
 router.get('/logout',  login.processLogout);
 
 // GET route for loading the register page
 router.get('/register',  register.render);
-//POST route for register a user
+// POST route for register a user
 router.post('/register',  register.processRegisterPage);
 
 

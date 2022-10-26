@@ -10,7 +10,14 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
-const index = require("../controllers/index.controller");
+const contact = require("../controllers/contact.controller");
+
+/* GET route for contacts list. */
+router.get('/list', requireAuth,  contact.render);
+
+// POST route for saving contac information 
+router.post('/add', contact.saveContactPage);
+
 
 //fucntion that requirer authentication
 function requireAuth(req,res,next) {
@@ -20,6 +27,4 @@ function requireAuth(req,res,next) {
     next();
 }
 
-/* GET route for contacts list. */
-router.get('/list', requireAuth,  index.render);
-
+module.exports = router;

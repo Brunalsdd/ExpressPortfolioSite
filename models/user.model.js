@@ -1,3 +1,9 @@
+/*
+Student: Bruna Donatoni
+Student ID: 301199383
+Date: Oct 26, 2022
+*/
+
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 let Schema = mongoose.Schema;

@@ -23,7 +23,7 @@ exports.render = function (req, res) {
             displayName: req.user ? req.user.displayName : ""
         })
     } else {
-        return res.redirect('/contacts/list');
+        return res.redirect('/contact/list');
     }
 }
 
@@ -44,7 +44,7 @@ exports.processLoginPage = function (req, res, next) {
             if (err) {
                 return next(err);
             }
-            return res.redirect('/contacts/list');
+            return res.redirect('/contact/list');
         });
     })(req, res, next);
 }

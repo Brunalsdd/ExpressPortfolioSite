@@ -13,11 +13,19 @@ let passport = require('passport');
 const contact = require("../controllers/contact.controller");
 
 /* GET route for contacts list. */
-router.get('/list', requireAuth,  contact.render);
+router.get('/list', requireAuth,  contact.findAllPage);
 
 // POST route for saving contac information 
 router.post('/add', contact.saveContactPage);
 
+// POST route for editing contac information 
+router.post('/:id', contact.updateContactPage);
+
+// GET route for deleting a contact
+router.get('/delete/:id', requireAuth, contact.deleteContact);
+
+// GET reoute for display detail about a contactw
+router.get('/:id', requireAuth, contact.findDetailPage);
 
 //fucntion that requirer authentication
 function requireAuth(req,res,next) {

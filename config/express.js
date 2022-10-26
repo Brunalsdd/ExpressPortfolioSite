@@ -17,11 +17,11 @@ let cookieParser = require('cookie-parser');
 module.exports = function () {
     let app = express();
 
-    if (process.env.NODE_ENV === 'development') {
-        app.use(morgan('dev'));
-    } else if (process.env.NODE_ENV === 'production') {
-        compress();
-    }
+    // if (process.env.NODE_ENV === 'development') {
+    //     app.use(morgan('dev'));
+    // } else if (process.env.NODE_ENV === 'production') {
+    //     compress();
+    // }
 
     app.use(bodyParser.urlencoded({
         extended: true
